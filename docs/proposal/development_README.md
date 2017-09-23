@@ -1,51 +1,46 @@
 # myPantry
 
 ## Summary
-This website keeps track of a user's pantry items, and allows
-the user to create grocery lists and add recipes.
+This application allows users to keep track of what's in their pantry, with functions to add, update, and delete pantry items. Users can also add, update and delete items to their grocery, and transfer purchased items to their pantry. Users can add, update and delete recipes, and set reminders and their due dates.
 
 
-## MVP Checklist
+## MVP Checklist and Implementation Timeline
 
-Step 1: New account creation, login, and guest/demo login
+#### Phase I (2 days): Create wireframes and proposal
+- Frontend: Design website, create wireframes, and React component hierarchy.
+- Backend: Define API endpoints.
+- Database: Design database schema and how the sample state will look.
 
-Step 2: A production README
+#### Phase II (2 days): New account creation, sign in, and guest login
+- Backend setup with a functioning Rails project.
+- Frontend user authentication.
 
-Step 3: Hosting on Heroku
+#### Phase III (4 days): Create model, controller, API, and React components for pantry and grocery
+- Adding pantry and grocery items will be user entered data in a single line (e.g. "3 cups milk") with error handling for incorrect string inputs. Implement function to split up input string into quantity, unit, and item before saving to the database.
+- Inline editing of pantry and grocery items with error handling.
+- User can delete pantry and grocery items.
+- Implement functions and event handlers to transfer grocery items to "purchased", and add to pantry. Grocery items added to pantry will combine duplicate items.
 
-Step 4: Phases
-- Phase 1: Tasks: User can add, update, and delete grocery items.
-- Phase 2: Lists: User can make grocery shopping lists and transfer items to "purchased" list.
-- Phase 3: List summary (time, num tasks, num completed): User can transfer
-purchases to pantry, and pantry will auto-update. Once updated, pantry
-will make a note of the last date the item was updated.
-- Phase 4: Search: Users can search for a pantry item and once item is
-found, the site will auto-scroll to that item.
-- Bonus 1: Recipe page where users can search for recipes. User can click on
-a recipe to be taken to that recipe's show page. User can rate and
-delete a recipe. User can add a new recipe.
-- Bonus 2: Pantry will cross-check ingredients for a recipe with a user's pantry
-and auto-generate a grocery list with missing items.  User can import
-recipes from another site, and pantry will extract out the ingredients
-and auto-generate the ingredient list for the user.
+#### Phase IV (2 days): Create model, controller, API, and React components for reminders
+- User can create and delete reminders, and optionally set due dates for reminders.
+- Reminders with due dates will be assigned to date categories (e.g. "Due Today", "Due In One Week", etc).
 
+#### Phase V (1 day): Create React components for Search, User Guide, and Conversion Calculator
+- User can search for an item in their pantry and grocery, and if found, will return a list of that item's quantity and unit.
+- User can click on the info icon to open the "User Guide". The drawer provides information on how to use the application.
+- User can click on the calculator icon to open the "Conversion Calculator". User can convert between units using the "Conversion Calculator".
 
-## Implementation Timeline
-- Step 1: Backend setup and Front End User Authentication (2 days).
-Objective: Functioning rails project with front-end Authentication
+#### Phase VI (3 days): Create logo, apply CSS styling, and obtain user feedback
+- Create custom logo and favicon for application.
+- Apply color schema and CSS styling using wireframes as a guide.
+- Obtain user data on UI and UX, and implement changes due to feedback.
 
-- Phase 1: Tasks- Model, API, and components (2 days). Objectives:  
-User can add, update, and delete grocery items.
+#### Phase VII (1 day): A production README and launching on Heroku
+- Create a production README, include backend and frontend technologies used, and future implementations.
+- Host application on Heroku and implement changes (if needed).
 
-- Phase 2: Model, API, and components (2 days). Objective: Grocery lists
-can be created, read, edited and destroyed through the API.
-
-- Phase 3: Pantry (2 days). Objective: Pantry items can be created, read,
-edited and destroyed through the API.
-
-- Phase 4: Search (1 day). Objective: Pantry and grocery items are searchable.
-
-- Bonus 1: Add Recipe Page (1 day, W2 Th 6pm). Objective: Add RecipeScreen,
-RecipeView, and create a form to add a new recipe.
-- Bonus 2: Objective: Pantry items are cross-checked with recipe ingredients
-before generation of grocery list. Recipes can be imported from other websites.
+#### Bonus (2 days): Create model, controller, API, and React components for recipes
+- User can add or update a recipe by using either the new recipe or update recipe form. Forms include allowing the user to upload a custom image, or a default image will be provided.
+- User can delete recipes.
+- User can click on the recipe image in the recipe index page to be taken to the recipe detail page.
+- In the detail page, a user can edit or delete the recipe, and choose a date to make the recipe.
