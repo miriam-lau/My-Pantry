@@ -1,55 +1,59 @@
 [myPantry](https://mypantry.herokuapp.com/#/) is a personal project by Miriam Lau.
 
-myPantry is a web application for cooking enthusiasts. myPantry allows users to add items to their pantry and grocery, and update or delete items in their pantry and grocery. With a click of a checkbox or button, users can transfer groceries to purchase, and auto-update the pantry with purchased groceries. Users can add, update and delete recipes, and set reminders and their due dates.
 
-![homepage](./docs/homepage1.png)
+## Summary
+
+*myPantry* is a web application for cooking enthusiasts. *myPantry* allows users to keep track of their pantry items, and update their pantry after purchasing items from their grocery page. Users can also create a library of their favorite recipes, and use the reminders feature to keep track of daily or upcoming tasks.
+
+![homepage](./docs/website_pics/homepage_pic.png)
 
 
 ## Features
 
-#### Secure Authentication
+### Secure Authentication
 - Users can create accounts or sign in to their accounts with secure authentication.
 
-![session modals]()
-
-#### Pantry Items & Reminders
+### Pantry Items & Reminders
 - Users can add, update and delete pantry items. Pantry items are organized by category.
-- Users can add and delete reminders. Reminders are organized by due date.
-- Recipes that have a "date to make" are also listed in the Reminder section.
+- Users can add and delete reminders. Reminders are organized by date categories.
 
-![pantry page](./docs/pantry1.png)
+![pantry page](./docs/website_pics/pantry_and_reminder_pic.png)
 
-#### Grocery Shopping List
+### Grocery Shopping List
 - Users can add, update, and delete grocery items.
-- Users can transfer groceries "Purchased" by clicking the checkbox and move purchased items to their Pantry by clicking the "Add to Pantry" button. Duplicate items with the same unit will be combined in the Pantry.
+- Users can transfer groceries to "Purchased" by clicking the checkbox, and move purchased items to their Pantry by clicking the "Add to Pantry" button. Duplicate items with the same unit will be combined in the Pantry.
 
-![grocery page](./docs/grocery1.png)
+![grocery page](./docs/website_pics/grocery_pic.png)
 
-#### Favorite Recipes
+### Favorite Recipes
 - Users can add, update, and delete recipes.
-- Clicking on a recipe image will take the user to that recipe's detail page.
-- Users can choose a date to make the recipe.
+- The recipe index shows all the recipes a user has saved, and has a link to add a new recipe. Clicking on a recipe image will take the user to that recipe's detail page.
+- A recipe detail page shows information about the recipe, and also allows users to update and delete the recipe.
 
-![recipe page](./docs/recipe1.png)
+![recipe index page](./docs/website_pics/recipe_index_pic.png)
+
+![recipe detail page](./docs/website_pics/recipe_detail_pic.png)
+
+### Features on Top Navigation bar
 
 #### Search
-- Users can search for items in their grocery or pantry.
+- Users can search for items currently in their grocery and pantry.
+
+#### User Guide
+- A user guide provides information on how to use the application.
 
 #### Conversion Calculator
 - A calculator assists users in converting quantities to different measurement units.
 
-#### User Guide
-- A user guide (info icon in top navigation bar) provides information on how to use the application.
-
 
 ## Project Design
-- A [proposal](./docs/proposal/development_README.md) was drafted with an implementation timeline during the development process.
+- A [proposal](./docs/proposal/development_README.md) was drafted with an implementation timeline on the development process.
 - [Wireframes](./docs/proposal/wireframe_doc.md) were created and used to convey the website design.
 - A [database schema](./docs/proposal/schema.md) was prepared in addition to the design proposal.
 
 
 ## Technology
-myPantry is a single-page application implementing the Rails framework (backend) and the React library (frontend).
+myPantry is a single-page application implementing the *Rails* framework (backend) and the *React* library (frontend).
 - [Backend Dependencies](./docs/backend_tech.md)
 - [Frontend Dependencies](./docs/frontend_tech.md)
 
